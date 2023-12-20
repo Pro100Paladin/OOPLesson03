@@ -21,5 +21,21 @@ public class Main {
         System.out.println(clinic.getPatients());
         System.out.println(clinic.getGoables());
 
+
+        String patientBarsik = barsik.getName();
+        Groomer groom = new Groomer("Svetlana", LocalDate.of(1995, 6, 7), "woman",3.5, patientBarsik);
+        System.out.println(groom);
+        System.out.println(groom.inspection());
+        groom.getHaircut();
+
+
+
+//        protected String name;
+//    protected LocalDate birthdate;
+//    protected String gender;
+//    protected String profession;
+//    protected double seniority;
+//    protected String patient;
+
     }
 }
