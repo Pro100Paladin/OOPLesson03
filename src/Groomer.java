@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Groomer extends Doctor implements Inspectionable{
+public class Groomer extends Doctor implements Inspectionable, СonclusionOperationable{
 
     public Groomer(String name, LocalDate birthdate, String gender, double seniority, String patient) {
         super(name, birthdate, gender, seniority, patient);
@@ -13,6 +13,12 @@ public class Groomer extends Doctor implements Inspectionable{
         return answer;
     }
     public void getHaircut(){
-        System.out.println("Стрижка выполнена");
+        System.out.println("выполняется стрижка");
+    }
+
+    @Override
+    public String conclusion(){
+        String answer = "Стрижка выполнена!";
+        return answer;
     }
 }

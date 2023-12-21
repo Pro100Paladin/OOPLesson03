@@ -27,6 +27,13 @@ public class Main {
         System.out.println(groom);
         System.out.println(groom.inspection());
         groom.getHaircut();
+        System.out.println(groom.conclusion());
+
+        String patientDuck = duck.getName();
+        Surgeon surg = new Surgeon("Oleg", LocalDate.of(1988, 10, 11), "man", 9.3, patientDuck);
+        System.out.println(surg);
+        System.out.println(surg.conclusion());
+
 
 
 
