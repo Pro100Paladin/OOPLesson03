@@ -1,9 +1,6 @@
 package pharmacy;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class PharmacyMain {
     public static void main(String[] args) {
@@ -30,6 +27,21 @@ public class PharmacyMain {
 
         Collections.sort(list);
         System.out.println(list);
+
+        //home work
+
+        IterablePharmacy pharm1 = new IterablePharmacy();
+        pharm1.addComponents(salt, pineceline);
+
+        IterablePharmacy pharm2 = new IterablePharmacy();
+        pharm2.addComponents(salt, pineceline);
+
+        System.out.println(pharm1);
+
+        Set<IterablePharmacy> result = new HashSet<>();
+        result.add(pharm1);
+        result.add(pharm2);
+        System.out.println(result.size());
 
     }
 

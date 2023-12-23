@@ -2,10 +2,7 @@ package pharmacy;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class IterablePharmacy implements Iterable<Component> {
     private int index;
@@ -47,4 +44,34 @@ public class IterablePharmacy implements Iterable<Component> {
 //    public Iterator<Component> iterator() {
 //        return new ComponentIterator(this);
 //    }
+
+    @Override
+    public String toString() {
+        return "IterablePharmacy{" +
+                "index=" + index +
+                ", components=" + components +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        IterablePharmacy that = (IterablePharmacy) o;
+        return index == that.index && Objects.equals(components, that.components);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(index, components);
+    }
+
+//    @Override
+//    public int compareTo(@NotNull IterablePharmacy o) {
+////        //        return Integer.compare(this.power, o.power);
+////        if (this.name.compareTo(o.name) > 0) return -1;
+////        if (this.name.compareTo(o.name) < 0) return 1;
+////        return 0;
+//////        return Integer.compare(0, this.name.compareTo(o.name));
+////    }
 }
