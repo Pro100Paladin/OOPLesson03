@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class Groomer extends Doctor implements Inspectionable, СonclusionOperationable{
+public class Groomer extends Doctor implements Inspectionable, ConclusionOperationable{
 
     public Groomer(String name, LocalDate birthdate, String gender, double seniority, String patient) {
         super(name, birthdate, gender, seniority, patient);

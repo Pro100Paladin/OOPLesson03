@@ -8,7 +8,7 @@ public class Main {
         System.out.println(barsik);
         System.out.println(barsik.getLegsCount());
         Animal eagle = new Eagle("Kesha", LocalDate.of(1993, 6, 6), new ArrayList<>(), "Chumka", "Boss");
-
+        Fish flipper = new Fish("Flipper", LocalDate.of(2000, 4, 8), new ArrayList<>(), "-", "Lopaka");
 
         List<Animal> animals = new ArrayList<>();
         animals.add(barsik);
@@ -21,7 +21,7 @@ public class Main {
         System.out.println(clinic.getPatients());
         System.out.println(clinic.getGoables());
 
-
+        //Groomer
         String patientBarsik = barsik.getName();
         Groomer groom = new Groomer("Svetlana", LocalDate.of(1995, 6, 7), "woman",3.5, patientBarsik);
         System.out.println(groom);
@@ -29,11 +29,21 @@ public class Main {
         groom.getHaircut();
         System.out.println(groom.conclusion());
 
+        //Surgeon
         String patientDuck = duck.getName();
         Surgeon surg = new Surgeon("Oleg", LocalDate.of(1988, 10, 11), "man", 9.3, patientDuck);
         System.out.println(surg);
+        System.out.println(surg.inspection());
+        surg.getSurgical_operation();
         System.out.println(surg.conclusion());
 
+        //Nurse
+        String patientFlipper = flipper.getName();
+        Nurse nurse = new Nurse("Anna", LocalDate.of(1997, 9, 9), "woman", 4.9, patientFlipper);
+        System.out.println(nurse);
+        System.out.println(nurse.inspection());
+        nurse.getVattination();
+        System.out.println(nurse.conclusion());
 
 
 

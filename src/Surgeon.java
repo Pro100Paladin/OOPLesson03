@@ -2,7 +2,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.time.LocalDate;
 
-public class Surgeon extends Doctor implements Inspectionable, СonclusionOperationable{
+public class Surgeon extends Doctor implements Inspectionable, ConclusionOperationable{
     public Surgeon(String name, LocalDate birthdate, String gender, double seniority, String patient) {
         super(name, birthdate, gender, seniority, patient);
     }
@@ -10,7 +10,7 @@ public class Surgeon extends Doctor implements Inspectionable, СonclusionOperat
     @NotNull
     @Override
     public String inspection() {
-        System.out.printf(" Осмотр врача %s", profession);
+        System.out.printf(" Осмотр врача %s ", profession);
         return "Вашему питомцу требуется, небольшая операция...";
     }
 
@@ -21,7 +21,7 @@ public class Surgeon extends Doctor implements Inspectionable, СonclusionOperat
     @NotNull
     @Override
     public String conclusion() {
-        String answer = "Выполнена операция";
+        String answer = "Операция выполнена";
         return answer;
     }
 

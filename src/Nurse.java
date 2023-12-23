@@ -10,7 +10,14 @@ public class Nurse extends Doctor implements Inspectionable{
     @NotNull
     @Override
     public String inspection() {
-        System.out.printf("%s ", profession);
-        return "Требуется, осмотр ";
+        return "Требуется сделать прививку";
+    }
+
+    public void getVattination() {
+        System.out.println("Прививка выполняется");
+    }
+
+    public String conclusion() {
+        return "Прививка выполнена";
     }
 }
