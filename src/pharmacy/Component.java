@@ -3,9 +3,9 @@ package pharmacy;
 import org.jetbrains.annotations.NotNull;
 
 public class Component implements Comparable<Component>{
-    private String name;
-    private String weight;
-    private int power;
+    protected String name;
+    protected String weight;
+    protected int power;
 
 
     public Component(String name, String weight, int power) {
@@ -25,10 +25,6 @@ public class Component implements Comparable<Component>{
 
     @Override
     public int compareTo(@NotNull Component o) {
-//        return Integer.compare(this.power, o.power);
-        if (this.name.compareTo(o.name) > 0) return -1;
-        if (this.name.compareTo(o.name) < 0) return 1;
-        return 0;
-//        return Integer.compare(0, this.name.compareTo(o.name));
+        return Integer.compare(0, this.name.compareTo(o.name));
     }
 }

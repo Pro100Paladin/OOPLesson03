@@ -1,6 +1,7 @@
 package pharmacy;
 
 import java.util.*;
+;
 
 public class PharmacyMain {
     public static void main(String[] args) {
@@ -36,13 +37,17 @@ public class PharmacyMain {
         IterablePharmacy pharm2 = new IterablePharmacy();
         pharm2.addComponents(salt, pineceline);
 
-        System.out.println(pharm1);
+        IterablePharmacy pharm3 = new IterablePharmacy();
+        pharm3.addComponents(sugar, pineceline);
+
+//        System.out.println(pharm1);
 
         Set<IterablePharmacy> result = new HashSet<>();
         result.add(pharm1);
         result.add(pharm2);
+        result.add(pharm3);
         System.out.println(result.size());
-
+        System.out.println();
     }
 
 }
